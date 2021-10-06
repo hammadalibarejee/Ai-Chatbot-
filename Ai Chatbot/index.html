@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color:red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: seagreen;
+            text-shadow: silver;
+            text-align: center;
+         }
+        .hover:hover{
+            color: chocolate;
+            -webkit-animation: reverse;
+            animation-name: inherit;
+            animation-fill-mode: inherit;
+            animation-duration: 2s;
+            -webkit-animation-duration:1s ;
+
+
+        }
+        body{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+        .f{
+            border: 1px;
+            border-style: dotted;
+        }
+        .s{
+            border: rgb(247, 169, 14);
+            margin: 1px;
+        }
+        .s:hover{
+            background-color: gray;
+        }
+         
+ 
+ </style>
+</head>
+<body>
+    <form action="" class="f">
+    
+        <h1 class="hover">Class 2 </h1>
+        num1:<input type="number" id="num1">
+        <br>
+        num2: <input type="number" id ="num2">
+        <br>
+        <button onclick="mf()" class="s">Do Sum</button>
+        <br>
+        <h1 id="result"></h1>
+    </form>
+    
+    <script>
+
+
+        function mf()
+        {
+            console.log("Hello")
+            let num1= document.getElementById("num1").value;
+            let num2= document.getElementById("num2").value;
+            let result =Number (num1)+Number(num2);
+            document.getElementById("result").innerText=result;
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
