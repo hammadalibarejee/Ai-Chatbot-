@@ -6,35 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .section {
+            text-align: justify;
+            margin-top: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px;
+            border-style: groove;
+            border-color: azure;
+            font-size: 17px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            margin-top: 10px;
+            border: none;
+            padding: 10px;
+            text-shadow: 1px;
+            font-family: cursive;
+            font-size: 15px;
+
+        }
+
+        .btn:hover {
+            background-color: gray;
+            color: white;
+            transition: ease-in;
+            transition-duration: 0.6s;
+            -webkit-transition: ease-in;
+            -webkit-transition-duration: 0.6s;
+        }
+    </style>
 </head>
 
 <body>
     <div>
         <!-- <h1 id="h1"></h1> -->
-        <form action="">
-            Enter the temperature: <input type="number" id="temp">
-            <br>
-            <button onclick="temperature()" class="btn">Submit </button>
-            <h1 id="tmp"></h1>
-        </form>
-
-        <form action="">
-            Enter the % of your Marks: <input type="number" id="marks">
-            <br>
-            <button onclick="marksshet()" class="btn">Submit </button>
-            <br>
-            <div id="per">
-                <h1></h1>
+        <div class="section">
+            <div class="content">
+                Enter the temperature: <input type="number" id="temp">
+                <br>
+                <button onclick="temperature()" class="btn">Submit </button>
+                <p id="tmp"></p>
             </div>
-            <br>
-        </form>
-        <br>
+        </div>
 
-        <form action="">
-            Enter the temperature: <input type="number" id="temp">
-            <br>
-            <button onclick="" class="btn">Submit </button>
-        </form>
+
+        <div class="section">
+            <div class="content">
+                Enter the % of your Marks: <input type="number" id="marks">
+                <br>
+                <button onclick="marksshet()" class="btn">Submit </button>
+                <br>
+                <div id="per"></div>
+                <br>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                Enter the Value in PKR: <input type="number" id="pkr">
+                Enter the Value in USD$: <input type="number" id="usd">
+                <br>
+
+                <button onclick="currencyConverterPkr()" class="btn">Convert</button>
+                <!-- <button onclick="currencyConverterUsd()" class="btn">Convert</button> -->
+                <div>
+                    <p id="con"></p>
+                </div>
+            </div>
+        </div>
 
     </div>
     <script>
@@ -43,21 +90,16 @@
         function temperature() {
             let t = document.getElementById("temp").value;
             if (t >= 25) {
-
                 document.getElementById("tmp").innerText = "There is no need to wear a jacket";
-
             }
             else if ((t >= 16) && (t <= 25)) {
                 document.getElementById("tmp").innerText = "You need to wear a jacket ";
             }
             else if ((t >= 1) && (t <= 15)) {
-                document.getElementById("tmp".innerText) = "You need to wear double jackets";
-
+                document.getElementById("tmp").innerText = "You need to wear double jackets";
             }
             else if (t <= 0) {
                 document.getElementById("tmp").innerText = "You don't need to go outside";
-
-
             }
             else {
                 document.getElementById("tmp").innerText = "Please enter the temprerature in range ";
@@ -81,6 +123,45 @@
                 document.getElementById("per").innerText = "Failed! Better luck next time."
             }
 
+        }
+        function currencyConverterPkr() {
+            //     // let pkr = document.getElementById("pkr").value;
+            //     let usd = document.getElementById("usd").value;
+            //     // if (pkr != null) {
+            //     //     rate = 170.81 * usd;
+            //     //     console.log(rate);
+            //     //     document.getElementById("con").innerText = `The Rate is:${rate}`;
+            //     // }
+            //     rate = usd / 170.81;
+            //     document.getElementById("con").innerText = `The converted amount in PKR is: ${rate}`;
+            //     console.log(rate);
+
+
+            // }
+            // currencyConverterUsd(){
+            //     let pkr = document.getElementById("pkr").value;
+            //     rate = pkr * 170.81;
+            //     document.getElementById("con").innerText = `The converted amount in PKR is: ${rate}`;
+            //     console.log(rate);
+
+            // 
+            var pkr = document.getElementById("pkr").value;
+            var usd = document.getElementById("usd").value;
+
+            //   console.log(pkr);
+            //   console.log(usd);
+
+            if (pkr === "" && usd !== "") {
+                //convert into pkr from usd
+                let rate = usd * 170.8;
+                console.log("result in pkr : ", rate);
+                document.getElementById("con").innerText = `result in pkr :  ${rate}`;
+            } else if (pkr !== "" && usd === "") {
+                // convert into usd from pkr
+                rate = pkr / 170.8;
+                console.log("res in usd is : ", rate);
+                document.getElementById("con").innerText = `result in usd :  ${rate}`;
+            }
         }
 
     </script>
