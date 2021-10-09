@@ -1,0 +1,39 @@
+
+        .section {
+            
+            text-align: justify;
+            margin-top: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px;
+            border-style: groove;
+            border-color: azure;
+            font-size: 17px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            margin-top: 10px;
+            border: none;
+            padding: 10px;
+            text-shadow: 1px;
+            font-family: cursive;
+            font-size: 15px;
+
+        }
+
+        .btn:hover {
+            background-color: gray;
+            color: white;
+            transition: ease-in;
+            transition-duration: 0.6s;
+            -webkit-transition: ease-in;
+            -webkit-transition-duration: 0.6s;
+        }
+ 

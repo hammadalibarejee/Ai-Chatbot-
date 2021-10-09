@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <!-- <h1 id="h1"></h1> -->
+        <div class="section">
+            <div class="content">
+                Enter the temperature: <input type="number" id="temp">
+                <br>
+                <button onclick="temperature()" class="btn">Submit </button>
+                <p id="tmp"></p>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="content">
+                Enter the % of your Marks: <input type="number" id="marks">
+                <br>
+                <button onclick="marksshet()" class="btn">Submit </button>
+                <br>
+                <div id="per"></div>
+                <br>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                Enter the Value in PKR: <input type="number" id="pkr">
+                Enter the Value in USD$: <input type="number" id="usd">
+                <br>
+
+                <button onclick="currencyConverterPkr()" class="btn">Convert</button>
+                <!-- <button onclick="currencyConverterUsd()" class="btn">Convert</button> -->
+                <div>
+                    <p id="con"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
