@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- <h1 id="h1"></h1> -->
+        <form action="">
+            Enter the temperature: <input type="number" id="temp">
+            <br>
+            <button onclick="temperature()" class="btn">Submit </button>
+            <h1 id="tmp"></h1>
+        </form>
+
+        <form action="">
+            Enter the % of your Marks: <input type="number" id="marks">
+            <br>
+            <button onclick="marksshet()" class="btn">Submit </button>
+            <br>
+            <div id="per">
+                <h1></h1>
+            </div>
+            <br>
+        </form>
+        <br>
+
+        <form action="">
+            Enter the temperature: <input type="number" id="temp">
+            <br>
+            <button onclick="" class="btn">Submit </button>
+        </form>
+
+    </div>
+    <script>
+
+        // document.getElementById("h1").innerText="Hello World";
+        function temperature() {
+            let t = document.getElementById("temp").value;
+            if (t >= 25) {
+
+                document.getElementById("tmp").innerText = "There is no need to wear a jacket";
+
+            }
+            else if ((t >= 16) && (t <= 25)) {
+                document.getElementById("tmp").innerText = "You need to wear a jacket ";
+            }
+            else if ((t >= 1) && (t <= 15)) {
+                document.getElementById("tmp".innerText) = "You need to wear double jackets";
+
+            }
+            else if (t <= 0) {
+                document.getElementById("tmp").innerText = "You don't need to go outside";
+
+
+            }
+            else {
+                document.getElementById("tmp").innerText = "Please enter the temprerature in range ";
+            }
+        }
+        function marksshet() {
+            let m = document.getElementById("marks").value;
+            if (m >= 80 && m <= 100) {
+                document.getElementById("per").innerText = "A1 Grade";
+                document.getElementById("per").innerText = "Congo! You have got the schorlarship";
+            }
+            else if (m >= 70 && m <= 79) {
+                document.getElementById("per").innerText = "A Grade";
+
+            }
+            else if (m >= 60 && m <= 69) {
+                document.getElementById("per").innerText = "B Grade";
+
+            }
+            else {
+                document.getElementById("per").innerText = "Failed! Better luck next time."
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
